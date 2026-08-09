@@ -1,0 +1,22 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "trigger-dev",
+  "name": "Trigger.dev",
+  "category": "workflow-engines",
+  "type": "constructor",
+  "form": [
+    "web",
+    "cli"
+  ],
+  "license": "open_source",
+  "layers": [
+    "logic"
+  ],
+  "agentic": {
+    "mcp": true,
+    "api": true,
+    "cli": true,
+    "rating": "full"
+  },
+  "docs_url": "https://trigger.dev/docs"
+}

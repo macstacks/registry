@@ -1,0 +1,9 @@
+{
+  "$comment": "Trigger preset. In a project's macstack.json add: software + instance (where it lives) and replace the <placeholders>.",
+  "id": "trg-hourly-cron",
+  "type": "schedule",
+  "description": "Runs at the top of every hour.",
+  "config": {
+    "schedule": "0 * * * *"
+  }
+}

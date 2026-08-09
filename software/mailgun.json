@@ -1,0 +1,21 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "mailgun",
+  "name": "Mailgun",
+  "category": "communication",
+  "type": "ready_made",
+  "form": [
+    "api_service"
+  ],
+  "license": "saas",
+  "layers": [
+    "logic"
+  ],
+  "agentic": {
+    "mcp": false,
+    "api": true,
+    "cli": false,
+    "rating": "basic"
+  },
+  "docs_url": "https://documentation.mailgun.com/"
+}

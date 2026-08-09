@@ -1,0 +1,31 @@
+{
+  "$comment": "Entity template. In a project's macstack.json add the stack-specific half: stores[] (software+instance+role) and the single master.",
+  "id": "ticket",
+  "name": "Support ticket",
+  "attributes": [
+    {
+      "name": "client",
+      "type": "relation",
+      "relation": "client"
+    },
+    {
+      "name": "question",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "answer",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "values": [
+        "new",
+        "answered",
+        "escalated",
+        "closed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$comment": "Managed-agent preset. Replace the <placeholders> with your stack's connection/workflow/trigger ids.",
+  "id": "content-writer",
+  "name": "Content writer",
+  "role": "Drafts articles per the content plan and the brand book",
+  "model": "anthropic/claude-sonnet",
+  "instructions": "Write article drafts per the content plan: expert tone, H2/H3 structure, 1200-1800 words; facts only from the knowledge base",
+  "tools": {
+    "mcp": [
+      "<cms-mcp>"
+    ],
+    "workflows": [
+      "<draft-workflow>"
+    ]
+  },
+  "invocations": [
+    {
+      "via": "workflow",
+      "workflow": "<draft-workflow>"
+    }
+  ]
+}

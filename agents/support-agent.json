@@ -1,0 +1,26 @@
+{
+  "$comment": "Managed-agent preset. Replace the <placeholders> with your stack's connection/workflow/trigger ids.",
+  "id": "support-agent",
+  "name": "Support agent",
+  "role": "Answers customer tickets from the knowledge base; escalates to a human on low confidence",
+  "model": "anthropic/claude-haiku",
+  "instructions": "Answer briefly and kindly, only from the knowledge base; if confidence < 0.7 or the customer is unhappy — escalate to an operator; never promise deadlines or discounts",
+  "tools": {
+    "mcp": [
+      "<kb-mcp>",
+      "<db-mcp>"
+    ],
+    "workflows": [
+      "<intake-workflow>"
+    ]
+  },
+  "invocations": [
+    {
+      "via": "workflow",
+      "workflow": "<intake-workflow>"
+    },
+    {
+      "via": "api"
+    }
+  ]
+}

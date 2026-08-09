@@ -1,0 +1,36 @@
+{
+  "$comment": "Entity template. In a project's macstack.json add the stack-specific half: stores[] (software+instance+role) and the single master.",
+  "id": "invoice",
+  "name": "Invoice",
+  "attributes": [
+    {
+      "name": "number",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "client",
+      "type": "relation",
+      "relation": "client"
+    },
+    {
+      "name": "amount",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "currency",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "enum",
+      "values": [
+        "draft",
+        "sent",
+        "paid",
+        "overdue"
+      ]
+    }
+  ]
+}

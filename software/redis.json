@@ -1,0 +1,22 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "redis",
+  "name": "Redis",
+  "category": "databases",
+  "type": "ready_made",
+  "form": [
+    "cli",
+    "api_service"
+  ],
+  "license": "open_source",
+  "layers": [
+    "data"
+  ],
+  "agentic": {
+    "mcp": true,
+    "api": true,
+    "cli": true,
+    "rating": "full"
+  },
+  "docs_url": "https://redis.io/docs/"
+}

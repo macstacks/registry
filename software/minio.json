@@ -1,0 +1,23 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "minio",
+  "name": "MinIO",
+  "category": "file-storage",
+  "type": "ready_made",
+  "form": [
+    "web",
+    "cli",
+    "api_service"
+  ],
+  "license": "open_source",
+  "layers": [
+    "data"
+  ],
+  "agentic": {
+    "mcp": true,
+    "api": true,
+    "cli": true,
+    "rating": "full"
+  },
+  "docs_url": "https://min.io/docs/minio/linux/index.html"
+}

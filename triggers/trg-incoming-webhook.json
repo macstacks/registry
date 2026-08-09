@@ -1,0 +1,9 @@
+{
+  "$comment": "Trigger preset. In a project's macstack.json add: software + instance (where it lives) and replace the <placeholders>.",
+  "id": "trg-incoming-webhook",
+  "type": "webhook",
+  "description": "Incoming HTTP webhook; set the listener path.",
+  "config": {
+    "path": "/hooks/<name>"
+  }
+}

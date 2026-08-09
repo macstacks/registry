@@ -1,0 +1,21 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "metabase",
+  "name": "Metabase",
+  "category": "analytics-bi",
+  "type": "constructor",
+  "form": [
+    "web"
+  ],
+  "license": "open_source",
+  "layers": [
+    "interface"
+  ],
+  "agentic": {
+    "mcp": "partial",
+    "api": true,
+    "cli": "partial",
+    "rating": "basic"
+  },
+  "docs_url": "https://www.metabase.com/docs/"
+}

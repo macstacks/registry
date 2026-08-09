@@ -1,0 +1,6 @@
+{
+  "$comment": "Trigger preset. In a project's macstack.json add: software + instance (where it lives) and replace the <placeholders>.",
+  "id": "trg-manual",
+  "type": "manual",
+  "description": "Started by a human or an agent on demand."
+}

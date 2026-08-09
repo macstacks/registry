@@ -1,0 +1,22 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "nocodb",
+  "name": "NocoDB",
+  "category": "low-code-platforms",
+  "type": "constructor",
+  "form": [
+    "web"
+  ],
+  "license": "open_source",
+  "layers": [
+    "data",
+    "interface"
+  ],
+  "agentic": {
+    "mcp": true,
+    "api": true,
+    "cli": false,
+    "rating": "good"
+  },
+  "docs_url": "https://docs.nocodb.com/"
+}

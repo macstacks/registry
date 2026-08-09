@@ -1,0 +1,11 @@
+{
+  "$comment": "Trigger preset. In a project's macstack.json add: software + instance (where it lives) and replace the <placeholders>.",
+  "id": "trg-db-event-update",
+  "type": "db_event",
+  "description": "Fires when a record changes state (e.g. status -> published).",
+  "config": {
+    "entity": "<entity-id>",
+    "event": "update",
+    "condition": "<field> -> <state>"
+  }
+}

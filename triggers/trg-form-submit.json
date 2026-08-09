@@ -1,0 +1,9 @@
+{
+  "$comment": "Trigger preset. In a project's macstack.json add: software + instance (where it lives) and replace the <placeholders>.",
+  "id": "trg-form-submit",
+  "type": "form",
+  "description": "Fires when a form is submitted into the given collection.",
+  "config": {
+    "collection": "<collection>"
+  }
+}

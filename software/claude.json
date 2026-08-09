@@ -1,0 +1,22 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "claude",
+  "name": "Anthropic Claude",
+  "category": "ai-llm-services",
+  "type": "ready_made",
+  "form": [
+    "api_service",
+    "cli"
+  ],
+  "license": "saas",
+  "layers": [
+    "logic"
+  ],
+  "agentic": {
+    "mcp": true,
+    "api": true,
+    "cli": true,
+    "rating": "full"
+  },
+  "docs_url": "https://docs.claude.com/"
+}

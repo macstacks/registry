@@ -1,0 +1,26 @@
+{
+  "$comment": "Managed-agent preset. Replace the <placeholders> with your stack's connection/workflow/trigger ids.",
+  "id": "lead-qualifier",
+  "name": "Lead qualifier",
+  "role": "Scores and enriches inbound leads before they reach the CRM",
+  "model": "anthropic/claude-haiku",
+  "instructions": "Score the lead 0-100 from the form data and public sources; attach a one-paragraph rationale; never invent facts",
+  "tools": {
+    "mcp": [
+      "<crm-mcp>"
+    ],
+    "workflows": [
+      "<lead-sync-workflow>"
+    ]
+  },
+  "invocations": [
+    {
+      "via": "trigger",
+      "trigger": "<lead-created-trigger>"
+    },
+    {
+      "via": "workflow",
+      "workflow": "<lead-sync-workflow>"
+    }
+  ]
+}

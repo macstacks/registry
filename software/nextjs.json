@@ -1,0 +1,23 @@
+{
+  "$comment": "Software passport (stack-independent). In a project's macstack.json add the stack-specific half: role, value, hosting, instances, cost, components.",
+  "id": "nextjs",
+  "name": "Next.js",
+  "category": "frontend-frameworks",
+  "type": "framework",
+  "form": [
+    "web",
+    "cli"
+  ],
+  "license": "open_source",
+  "layers": [
+    "logic",
+    "interface"
+  ],
+  "agentic": {
+    "mcp": false,
+    "api": "partial",
+    "cli": true,
+    "rating": "basic"
+  },
+  "docs_url": "https://nextjs.org/docs"
+}
