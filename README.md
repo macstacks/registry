@@ -22,7 +22,23 @@ speaks the same vocabulary.
    those belong in each project's macstack.json.
 3. `agentic.rating` must match the channels: 3×true = full, 2 = good, 1 = basic,
    only "partial" = partial, none = none.
-4. Run `python3 scripts/validate.py` before a PR — CI runs the same check.
+4. Run the validator before a PR — CI runs the same check, plus its own tests
+   (`python3 scripts/test_validate.py`):
+
+   ```sh
+   python3 scripts/validate.py \
+     --marketplace <path-or-URL to Agents-Store/claude-plugins .claude-plugin/marketplace.json> \
+     --schema <path-or-URL to macstacks/macstack schema/macstack.schema.json>
+   ```
+
+   - `--marketplace` (repeatable): every plugin name in `coverage-areas.json` `examples`
+     must exist in one of the given marketplaces.
+   - `--schema`: the area ids in `coverage-areas.json` must match the vocabulary the
+     standard's `$defs/coverageArea` describes.
+   - Both take a local path or an `https://` URL. Without a flag its check is skipped
+     with a note, so a plain `python3 scripts/validate.py` still works offline; CI always
+     passes both. `coverage-areas.json` structure (version, unique kebab-case ids, kind,
+     name, description, examples) is checked in every run.
 
 ## Relation to the ecosystem
 
